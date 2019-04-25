@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Liste des annonces</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #663202;">
+<ion-card-content style="background-color: #663202;">
+      <ion-searchbar placeholder="teste" [(ngModel)]="searchTerm" (ionInput)="filterItems($event)"></ion-searchbar>
+</ion-card-content>
+
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTer" (ionChange)="search($event)"></ion-searchbar>
+<button (click)="get_products()">GET /products</button>
+
+
+    
+  
+  <ion-list inset>
+    <ion-item button *ngFor="let user of (users | async)?.results " (click)="openDetails($event,user)"> 
+      <h2>{{user.title}}</h2>
+      <p>{{user.title}}</p>
+      <p>{{user.name}}</p>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
+</ion-content>

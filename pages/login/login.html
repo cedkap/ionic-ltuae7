@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-navbar style="background-color: #663202;">
+    <ion-title>deee</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #663202;">
+ <ion-card-content style="background-color: #663202;">
+      <h4 text-center margin-top>Insert your credentials</h4>
+    </ion-card-content>
+  <ion-item>
+    <ion-label stacked>Username</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <div text-center margin-top>
+    <button ion-button margin-right (click)="signUp()">
+      SIGN UP
+    </button>
+
+    <button ion-button color="secondary" (click)="signIn()">
+      SIGN IN
+    </button>
+  </div>
+  </ion-content>
